@@ -283,7 +283,7 @@ def run_pheno_ranker():
             # In cohort mode, run the R script to generate the heatmap
             if mode == "cohort":
                 # Run the R script
-                rscript_command = ["Rscript", "../pheno-ranker/share/r/heatmap.R"]
+                rscript_command = ["Rscript", "share/r/heatmap.R"]
                 r_result = subprocess.run(rscript_command, capture_output=True, text=True)
                 if r_result.returncode != 0:
                     raise Exception(f"R script error:\n{r_result.stderr}")
