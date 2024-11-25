@@ -2,7 +2,7 @@
 FROM ubuntu:22.04
 
 # File Author / Maintainer
-LABEL maintainer Manuel Rueda <manuel.rueda@cnag.eu>
+LABEL maintainer="Manuel Rueda <manuel.rueda@cnag.eu>"
 
 # Set the environment variable to prevent interactive prompts during package installation
 ENV DEBIAN_FRONTEND=noninteractive
@@ -20,7 +20,9 @@ RUN apt-get update && \
         python3-pil \
         python3-pil.imagetk \
         tk-dev \
-        tcl-dev && \
+        tcl-dev \
+        r-base \
+        r-base-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Install required Python packages
@@ -30,6 +32,9 @@ RUN pip3 install --no-cache-dir \
 
 # Install the Pheno::Ranker Perl module from CPAN
 RUN cpanm --notest Pheno::Ranker
+
+# Install R package 'pheatmap'
+RUN Rscript -e "install.packages('pheatmap', repos='http://cran.rstudio.com/')"
 
 # Clone your Git repository containing the application code
 RUN git clone https://github.com/mrueda/pheno-ranker-app.git /opt/pheno-ranker-app
@@ -42,4 +47,4 @@ WORKDIR /opt/pheno-ranker-app
 
 # Set the command to run your application
 # Replace 'your_script.py' with the entry point of your application
-CMD ["python3", "your_script.py"]
+CMD ["python3", "pheno-ranker-app.py"]

@@ -52,6 +52,10 @@ docker run -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     pheno-ranker-app /bin/bash
 ```
+#### Run the App
+```bash
+python3 pheno-ranker-app
+``` 
 
 When done:
 
