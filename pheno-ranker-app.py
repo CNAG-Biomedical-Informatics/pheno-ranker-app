@@ -201,7 +201,7 @@ def run_pheno_ranker():
     def pheno_ranker_thread():
         try:
             # Construct the command for Pheno-Ranker
-            command = ["../pheno-ranker/bin/pheno-ranker"]
+            command = ["pheno-ranker"]
 
             # Add reference files
             for ref_file in reference_files:
