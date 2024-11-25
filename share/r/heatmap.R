@@ -1,16 +1,23 @@
-# Load library
+# Load the required library
 library("pheatmap")
-#library("heatmaply") # could not install
+
+# Get the input file name from command-line arguments
+args <- commandArgs(trailingOnly = TRUE)
+if (length(args) < 1) {
+  stop("Please provide the input file name as the first argument.")
+}
+
+input_file <- args[1]
 
 # Read in the input file as a matrix
-data <- as.matrix(read.table("matrix.txt", header = TRUE, row.names = 1))
+data <- as.matrix(read.table(input_file, header = TRUE, row.names = 1))
 
 # Save image
 png(filename = "heatmap.png", width = 1000, height = 1000,
     units = "px", pointsize = 12, bg = "white", res = NA)
 
 # Create the heatmap with row and column labels
-#heatmap(data, Rowv = FALSE, Colv = FALSE, labRow = rownames(data), labCol = colnames(data))
 pheatmap(data)
-#heatmaply(data)
-#dev.off()
+
+# Close the graphics device
+dev.off()
