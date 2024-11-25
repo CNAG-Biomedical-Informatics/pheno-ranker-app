@@ -32,11 +32,10 @@ RUN pip3 install --no-cache-dir \
 RUN cpanm --notest Pheno::Ranker
 
 # Clone your Git repository containing the application code
-# Replace 'your-github-username' and 'your-repo-name' with your actual GitHub username and repository name
-RUN git clone https://github.com/your-github-username/your-repo-name.git /opt/your-repo-name
+RUN git clone https://github.com/mrueda/pheno-ranker-app.git /opt/pheno-ranker-app
 
 # Set the working directory to the cloned repository
-WORKDIR /opt/your-repo-name
+WORKDIR /opt/pheno-ranker-app
 
 # Expose any necessary ports (if your application uses them)
 # EXPOSE 8000
