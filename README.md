@@ -43,6 +43,18 @@ docker build -t pheno-ranker-app .
 
 #### Run the Docker Container
 
+We need X11 access to be able to display windows.
+
 ```bash
-docker run -it --rm pheno-ranker-app
+xhost +local:docker
+docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    pheno-ranker-app /bin/bash
+```
+
+When done:
+
+```bash
+xhost -local:docker
 ```
