@@ -12,6 +12,9 @@ app.title("Pheno-Ranker App")
 app.geometry("800x800")
 app.resizable(True, True)  # Allow window resizing
 
+# Appearance
+ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
+
 # Create a canvas and scrollbar to make the GUI scrollable
 canvas = ctk.CTkCanvas(app)
 scrollbar = ctk.CTkScrollbar(app, orientation="vertical", command=canvas.yview)
