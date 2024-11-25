@@ -3,11 +3,9 @@ library("pheatmap")
 
 # Get the input file name from command-line arguments
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) < 1) {
-  stop("Please provide the input file name as the first argument.")
-}
 
-input_file <- args[1]
+# Set default input file if no arguments are provided
+input_file <- ifelse(length(args) >= 1, args[1], "matrix.txt")
 
 # Read in the input file as a matrix
 data <- as.matrix(read.table(input_file, header = TRUE, row.names = 1))
