@@ -8,7 +8,7 @@ from PIL import Image, ImageTk  # For displaying images
 
 # Initialize the main application window
 app = ctk.CTk()
-app.title("Pheno-Ranker GUI")
+app.title("Pheno-Ranker App")
 app.geometry("800x800")
 app.resizable(True, True)  # Allow window resizing
 
