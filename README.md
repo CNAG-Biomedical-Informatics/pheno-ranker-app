@@ -1,3 +1,7 @@
+[![Docker Build](https://github.com/cnag-biomedical-informatics/pheno-ranker-app/actions/workflows/docker-build.yml/badge.svg)](https://github.com/cnag-biomedical-informatics/pheno-ranker-app/actions/workflows/docker-build.yml)
+[![Docker Pulls](https://badgen.net/docker/pulls/manuelrueda/pheno-ranker-app?icon=docker&label=pulls)](https://hub.docker.com/r/manuelrueda/pheno-ranker-app/)
+[![Docker Image Size](https://badgen.net/docker/size/manuelrueda/pheno-ranker-app?icon=docker&label=image%20size)](https://hub.docker.com/r/manuelrueda/pheno-ranker-app/)
+
 # Pheno-Ranker App
 
 A standalone desktop application for phenotype ranking using the Pheno-Ranker tool, built with Python and CustomTkinter.
@@ -6,7 +10,7 @@ A standalone desktop application for phenotype ranking using the Pheno-Ranker to
 
 **Pheno-Ranker App** is a desktop application that provides a user-friendly graphical interface for the Pheno-Ranker tool.
 
-This application is built with Python and utilizes the [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library for an enhanced GUI experience. It integrates the **Pheno::Ranker** Perl module from CPAN, ensuring robust and reliable phenotype analysis.
+This application is built with Python and utilizes the [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library for an enhanced GUI experience. It integrates the [Pheno::Ranker](https://metacpan.org/dist/Pheno-Ranker) Perl module from CPAN, ensuring robust and reliable phenotype analysis.
 
 ## Features
 
@@ -55,7 +59,6 @@ wget https://raw.githubusercontent.com/mrueda/pheno-ranker-app/refs/heads/main/D
 Build the Docker Image:
 
 ```bash
-wget https://raw.githubusercontent.com/mrueda/pheno-ranker-app/refs/heads/main/Dockerfile
 docker build -t pheno-ranker-app .
 ```
 
