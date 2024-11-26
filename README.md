@@ -4,7 +4,7 @@ A standalone desktop application for phenotype ranking using the Pheno-Ranker to
 
 ## Overview
 
-**Pheno-Ranker App** is a desktop application that provides a user-friendly graphical interface for the Pheno-Ranker tool. Designed for researchers and clinicians in genetics and bioinformatics, it simplifies phenotype ranking by offering an intuitive interface to input data, configure options, and visualize results.
+**Pheno-Ranker App** is a desktop application that provides a user-friendly graphical interface for the Pheno-Ranker tool.
 
 This application is built with Python and utilizes the [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library for an enhanced GUI experience. It integrates the **Pheno::Ranker** Perl module from CPAN, ensuring robust and reliable phenotype analysis.
 
