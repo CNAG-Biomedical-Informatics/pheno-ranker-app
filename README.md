@@ -53,7 +53,7 @@ If you prefer to build the Docker image yourself, a Dockerfile is provided.
 Download the Dockerfile:
 
 ```bash
-wget https://raw.githubusercontent.com/mrueda/pheno-ranker-app/refs/heads/main/Dockerfile
+wget https://raw.githubusercontent.com/CNAG-Biomedical-Informatics/pheno-ranker-app/refs/heads/main/Dockerfile
 ```
 
 Build the Docker Image:
