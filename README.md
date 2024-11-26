@@ -22,19 +22,37 @@ This application is built with Python and utilizes the [CustomTkinter](https://g
 - **Error Handling**: Enhanced validation and error messages to guide users.
 - **Integration with Pheno::Ranker**: Leverages the powerful Pheno::Ranker Perl module for analysis.
 
+## Snapshot
+
+<img src="img/pheno-ranker-app-snapshot.png" width="500" />
+
 ## Getting Started
 
 ### Prerequisites
 
 - **Docker**: Ensure you have [Docker](https://www.docker.com/get-started) installed on your system.
 
-### Docker Installation
+### Installation and Running the Application
 
-A Dockerfile is provided to set up the application in a containerized environment.
+#### Option 1: Pull from Docker Hub
 
-#### Build the Docker Image
+The prebuilt Docker image is available on Docker Hub and can be pulled and run directly:
 
-The Dockerfile uses `wget` to download the repository directly during the build process. To build the image, simply run:
+```bash
+   docker pull manuelrueda/pheno-ranker-app
+```
+
+#### Option 2: Build the Docker Image locally
+
+If you prefer to build the Docker image yourself, a Dockerfile is provided.
+
+Download the Dockerfile:
+
+```bash
+wget https://raw.githubusercontent.com/mrueda/pheno-ranker-app/refs/heads/main/Dockerfile
+```
+
+Build the Docker Image:
 
 ```bash
 wget https://raw.githubusercontent.com/mrueda/pheno-ranker-app/refs/heads/main/Dockerfile
