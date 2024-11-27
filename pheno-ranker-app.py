@@ -8,7 +8,7 @@ from tkinter import filedialog
 from PIL import Image, ImageTk  # For displaying images
 
 # Define the version of your application
-VERSION = "0.1"
+VERSION = "0.01"
 
 # Parse command-line arguments
 def parse_args():

@@ -1,6 +1,7 @@
 [![Docker Build](https://github.com/cnag-biomedical-informatics/pheno-ranker-app/actions/workflows/docker-build.yml/badge.svg)](https://github.com/cnag-biomedical-informatics/pheno-ranker-app/actions/workflows/docker-build.yml)
 [![Docker Pulls](https://badgen.net/docker/pulls/manuelrueda/pheno-ranker-app?icon=docker&label=pulls)](https://hub.docker.com/r/manuelrueda/pheno-ranker-app/)
 [![Docker Image Size](https://badgen.net/docker/size/manuelrueda/pheno-ranker-app?icon=docker&label=image%20size)](https://hub.docker.com/r/manuelrueda/pheno-ranker-app/)
+![version](https://img.shields.io/badge/version-0.01_beta-orange)
 
 # Pheno-Ranker App
 
