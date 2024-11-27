@@ -1,0 +1,10 @@
+*.sh
+*.txt
+*.bck
+*.old
+*.swp
+*.pyc
+__pycache__/
+bck/
+old/
+README
