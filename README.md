@@ -45,6 +45,7 @@ The prebuilt Docker image is available on Docker Hub and can be pulled and run d
 
 ```bash
    docker pull manuelrueda/pheno-ranker-app
+   docker tag manuelrueda/pheno-ranker-app pheno-ranker-app
 ```
 
 #### Option 2: Build the Docker Image locally
