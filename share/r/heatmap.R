@@ -8,7 +8,7 @@ args <- commandArgs(trailingOnly = TRUE)
 input_file <- ifelse(length(args) >= 1, args[1], "matrix.txt")
 
 # Read in the input file as a matrix
-data <- as.matrix(read.table(input_file, header = TRUE, row.names = 1))
+data <- as.matrix(read.table(input_file, header = TRUE, row.names = 1, check.names = FALSE))
 
 # Save image
 png(filename = "heatmap.png", width = 1000, height = 1000,
