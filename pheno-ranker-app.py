@@ -244,12 +244,15 @@ def main():
                 # Construct the command for Pheno-Ranker
                 command = ["pheno-ranker"]
 
-                # Add reference files
+                # Add reference files in the visual order they appear on the screen
+                reference_files = [entry.get().strip() for entry in ref_file_entries if entry.get().strip()]  # Ensure no empty paths
+                
+                # Add reference files in the order they appear
                 for ref_file in reference_files:
                     command.extend(["-r", ref_file])
-
+                
                 # Add target file if in patient mode
-                if mode == "patient":
+                if mode == "patient" and target_file:
                     command.extend(["-t", target_file])
 
                 # Add optional arguments based on user input
